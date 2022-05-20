@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         let MyUbications = MKPointAnnotation()
         let lattitude = 17.999718495382083
         let longtitude = -92.95537877811958
-        //fetchStadiumsOnMap(stadiums)
+        fetchStadiumsOnMap(stadiums)
 
 
         MyUbications.coordinate = CLLocationCoordinate2D(latitude: lattitude, longitude: longtitude)
@@ -40,6 +40,15 @@ class ViewController: UIViewController {
         MyUbications.subtitle = "Aki estoy"
         Mapa.addAnnotation(MyUbications)
    
+    }
+    func fetchStadiumsOnMap(_ stadiums: [Stadium]) {
+      for stadium in stadiums {
+        let annotations = MKPointAnnotation()
+        annotations.title = stadium.name
+        annotations.coordinate = CLLocationCoordinate2D(latitude:
+          stadium.lattitude, longitude: stadium.longtitude)
+        Mapa.addAnnotation(annotations)
+      }
     }
     //funcion que checa la autorizavion de la locacion
     func checkLocationAuthorization() {
