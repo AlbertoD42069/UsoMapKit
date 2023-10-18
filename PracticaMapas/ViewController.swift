@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  PracticaMapas
 //
-//  Created by Hector Guadalupe Climaco Flores on 20/05/22.
+//  Created by Jesus Alberto Diaz Dominguez on 20/05/22.
 //
 
 import UIKit
